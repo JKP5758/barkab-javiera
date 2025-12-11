@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK & Studio Animasi - Company Profile</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 overflow-x-hidden">
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+    
+    <!-- Floating Particles Background -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="particle w-2 h-2 bg-blue-400 dark:bg-blue-500" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+        <div class="particle w-3 h-3 bg-purple-400 dark:bg-purple-500" style="left: 80%; top: 40%; animation-delay: 2s;"></div>
+        <div class="particle w-2 h-2 bg-pink-400 dark:bg-pink-500" style="left: 50%; top: 60%; animation-delay: 4s;"></div>
+        <div class="particle w-4 h-4 bg-blue-300 dark:bg-blue-600" style="left: 20%; top: 80%; animation-delay: 1s;"></div>
+        <div class="particle w-2 h-2 bg-purple-300 dark:bg-purple-600" style="left: 70%; top: 10%; animation-delay: 3s;"></div>
+        <div class="particle w-3 h-3 bg-pink-300 dark:bg-pink-600" style="left: 40%; top: 90%; animation-delay: 5s;"></div>
+    </div>
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4 bg">
+                <img src="./assets/img/barkab.webp" alt="Logo SMK" class="h-12 w-auto object-contain hover:scale-105 transition-transform duration-300">
+                <img src="./assets/img/javiera.webp" alt="Logo Studio Animasi" class="h-12 w-auto object-contain hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Beranda</a>
+                    <a href="#smk" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">SMK</a>
+                    <a href="#studio" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium">Studio</a>
+                    <a href="#keunggulan" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Keunggulan</a>
+                    <a href="#kontak" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Kontak</a>
+                </div>
+                <button id="themeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors glow-border">
+                    <svg id="sunIcon" class="w-6 h-6 text-yellow-500 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg id="moonIcon" class="w-6 h-6 text-gray-700 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden py-20 px-4 min-h-screen flex items-center">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 dark:from-blue-500/20 dark:via-purple-500/20 dark:to-pink-500/20"></div>
+        <div class="container mx-auto relative z-10 text-center fade-in-section">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-float">
+                <span class="glow-text-blue text-blue-600 dark:text-blue-400">SMK</span>
+                <span class="text-gray-800 dark:text-gray-200 mx-4">&</span>
+                <span class="glow-text-purple text-purple-600 dark:text-purple-400">Studio Animasi</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+                Menciptakan Generasi Kreatif dan Berkarakter melalui Pendidikan Berkualitas
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <div class="px-6 py-3 bg-blue-500 text-white rounded-full glow-border hover:scale-105 transition-transform cursor-pointer">
+                    <span class="font-semibold">Visi Misi Terdepan</span>
+                </div>
+                <div class="px-6 py-3 bg-purple-500 text-white rounded-full glow-border-purple hover:scale-105 transition-transform cursor-pointer">
+                    <span class="font-semibold">Inovasi Digital</span>
+                </div>
+            </div>
+            <a href="#smk" class="inline-block animate-bounce">
+                <svg class="w-8 h-8 text-gray-600 dark:text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- SMK Profile Section -->
+    <section id="smk" class="py-20 px-4 bg-gray-50 dark:bg-gray-800/50 fade-in-section">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="inline-block mb-4">
+                        <span class="text-sm font-semibold text-blue-600 dark:text-blue-400 glow-text-blue px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
+                            PROFIL SMK
+                        </span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-gray-100">
+                        Sekolah Menengah Kejuruan
+                        <span class="block text-blue-600 dark:text-blue-400 glow-text-blue mt-2">Berstandar Internasional</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        SMK kami adalah institusi pendidikan kejuruan yang berkomitmen untuk menghasilkan lulusan yang kompeten, 
+                        berkarakter, dan siap menghadapi tantangan dunia kerja. Dengan kurikulum yang terintegrasi dengan industri 
+                        dan fasilitas pembelajaran yang modern.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-1 glow-border">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Program Keahlian Terdepan</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Kurikulum berbasis kompetensi yang relevan dengan kebutuhan industri</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-1 glow-border">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Fasilitas Modern</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Laboratorium dan workshop dengan peralatan terkini</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-1 glow-border">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Kerjasama Industri</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Program magang dan penempatan kerja dengan perusahaan terkemuka</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl blur-xl opacity-20 dark:opacity-30 group-hover:opacity-30 dark:group-hover:opacity-40 transition-opacity"></div>
+                        <img src="[GAMBAR_SMK]" alt="Gedung SMK" class="relative rounded-2xl w-full h-auto object-cover shadow-2xl glow-border group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Animasi Profile Section -->
+    <section id="studio" class="py-20 px-4 fade-in-section">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-20 dark:opacity-30 group-hover:opacity-30 dark:group-hover:opacity-40 transition-opacity"></div>
+                        <img src="[GAMBAR_STUDIO_ANIMASI]" alt="Studio Animasi" class="relative rounded-2xl w-full h-auto object-cover shadow-2xl glow-border-purple group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+                <div>
+                    <div class="inline-block mb-4">
+                        <span class="text-sm font-semibold text-purple-600 dark:text-purple-400 glow-text-purple px-4 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-full">
+                            PROFIL STUDIO ANIMASI
+                        </span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-gray-100">
+                        Studio Animasi
+                        <span class="block text-purple-600 dark:text-purple-400 glow-text-purple mt-2">Kreativitas Tanpa Batas</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        Studio Animasi kami adalah pusat kreativitas yang menghasilkan karya animasi berkualitas tinggi. 
+                        Dengan tim profesional dan teknologi terkini, kami menciptakan konten visual yang memukau untuk 
+                        berbagai kebutuhan, dari iklan hingga produksi film animasi.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 mt-1 glow-border">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Produksi Animasi 2D & 3D</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Karya animasi berkualitas tinggi dengan teknologi terdepan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 mt-1 glow-border">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Tim Profesional</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Animator dan desainer berpengalaman dengan portofolio terbaik</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 mt-1 glow-border">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Portofolio Luas</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Berbagai proyek dari iklan, film, hingga konten edukasi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features/Highlights Section -->
+    <section id="keunggulan" class="py-20 px-4 bg-gray-50 dark:bg-gray-800/50 fade-in-section">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+                    Keunggulan Kami
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Komitmen kami dalam memberikan yang terbaik untuk masa depan yang lebih cerah
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 glow-border group hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform glow-border">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">Pendidikan Berkualitas</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Kurikulum yang terus diperbarui sesuai perkembangan industri dan teknologi terkini
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 glow-border-purple group hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform glow-border-purple">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">Inovasi Digital</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Pemanfaatan teknologi digital untuk pembelajaran dan produksi kreatif yang optimal
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 glow-border group hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform glow-border">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">Komunitas Kreatif</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Lingkungan yang mendukung kolaborasi dan pengembangan bakat kreatif setiap individu
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 px-4 fade-in-section">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="p-6 hover:scale-105 transition-transform">
+                    <div class="text-5xl font-bold mb-2 glow-text-blue text-blue-600 dark:text-blue-400" data-count="1000">0+</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-semibold">Siswa Aktif</div>
+                </div>
+                <div class="p-6 hover:scale-105 transition-transform">
+                    <div class="text-5xl font-bold mb-2 glow-text-purple text-purple-600 dark:text-purple-400" data-count="50">0+</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-semibold">Proyek Animasi</div>
+                </div>
+                <div class="p-6 hover:scale-105 transition-transform">
+                    <div class="text-5xl font-bold mb-2 glow-text-pink text-pink-600 dark:text-pink-400" data-count="95">0%</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-semibold">Tingkat Kelulusan</div>
+                </div>
+                <div class="p-6 hover:scale-105 transition-transform">
+                    <div class="text-5xl font-bold mb-2 glow-text-blue text-blue-600 dark:text-blue-400" data-count="100">0+</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-semibold">Mitra Industri</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 px-4 bg-gray-50 dark:bg-gray-800/50 fade-in-section">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+                    Galeri Karya
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Dokumentasi kegiatan dan hasil karya siswa serta studio animasi
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-2xl aspect-square">
+                    <img src="[GALERI_1]" alt="Galeri 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 glow-border">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-semibold">Kegiatan Belajar</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-square">
+                    <img src="[GALERI_2]" alt="Galeri 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 glow-border-purple">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-semibold">Karya Animasi</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-square">
+                    <img src="[GALERI_3]" alt="Galeri 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 glow-border">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-semibold">Workshop</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 fade-in-section">
+        <div class="container mx-auto">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Bergabunglah Bersama Kami</h2>
+                    <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                        Mari wujudkan impianmu menjadi kenyataan melalui pendidikan berkualitas dan kreativitas tanpa batas
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="#kontak" class="px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:scale-105 transition-transform glow-border">
+                            Hubungi Kami
+                        </a>
+                        <a href="#smk" class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all">
+                            Pelajari Lebih Lanjut
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop" class="glow-border">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-900 dark:bg-black text-gray-300 py-12 px-4 border-t border-gray-800">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Tentang Kami</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Komitmen kami adalah menciptakan generasi yang siap menghadapi tantangan masa depan 
+                        melalui pendidikan berkualitas dan kreativitas tanpa batas.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Kontak</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@smk-animasi.ac.id</li>
+                        <li>Telepon: (021) 1234-5678</li>
+                        <li>Alamat: Jl. Pendidikan No. 123, Jakarta</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Ikuti Kami</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors glow-border">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors glow-border">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors glow-border">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 SMK & Studio Animasi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const theme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+
+        // Scroll Progress Bar
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Fade in on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Counter Animation
+        const animateCounter = (element) => {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : '%');
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target + (element.textContent.includes('+') ? '+' : '%');
+                }
+            };
+
+            updateCounter();
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = document.querySelectorAll('[data-count]');
+                    counters.forEach(counter => {
+                        if (!counter.classList.contains('counted')) {
+                            counter.classList.add('counted');
+                            animateCounter(counter);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Find stats section by checking for data-count elements
+        const statsSections = document.querySelectorAll('section');
+        statsSections.forEach(section => {
+            if (section.querySelector('[data-count]')) {
+                statsObserver.observe(section);
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize first section as visible
+        document.querySelectorAll('.fade-in-section')[0]?.classList.add('visible');
+    </script>
+</body>
+</html>
