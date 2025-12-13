@@ -64,6 +64,68 @@
         </div>
     </section>
 
+    <section id="3d" class="py-16 px-4 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">3D Showcase</h2>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                Pilih model 3D di bawah untuk melihat pratinjau interaktif.
+            </p>
+
+            <div class="max-w-md mx-auto mb-8">
+                <label for="modelSelector" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Pilih Model</label>
+                <select id="modelSelector" class="w-full p-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer transition-colors hover:border-blue-400 dark:hover:border-blue-500">
+                    <option value="285c6f5899664a249d8223a8d7f3879d">SMK Muh 04 Boyolali</option>
+                    <option value="06ee6963a90242f5898a063a4f2438c8">Warung Makan Bu Bayu</option>
+                    <option value="15f1580a1c0a4fe0b5196faa2657898f">Rumah Dinas Kabupaten Lama</option>
+                    <option value="87e70008d48e49acb634919891b1f10c">Kantor Bupati</option>
+                    <option value="388f1aa890864ad1a480a694cb528368">Patung Lembu Suro</option>
+                    <option value="7bc0fcf3084d44fd83c826ba3605cd3a">Meja Makan</option>
+                    <option value="353144601f17464ab5e5518a1baa1a02">The Farm Char All</option>
+                </select>
+            </div>
+
+            <div id="previewContainer" class="relative w-full aspect-video bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                <div id="loadingIndicator" class="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-800 z-10">
+                    <div class="flex flex-col items-center gap-3">
+                        <div class="w-8 h-8 border-3 border-gray-300 dark:border-gray-600 border-t-blue-500 dark:border-t-blue-400 rounded-full animate-spin"></div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Memuat model...</p>
+                    </div>
+                </div>
+                <div class="sketchfab-embed-wrapper w-full h-full"> 
+                    <iframe id="sketchfab-iframe" title="3D Model Viewer" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" execution-while-out-of-viewport execution-while-not-rendered web-share class="w-full h-full" loading="lazy" src="https://sketchfab.com/models/285c6f5899664a249d8223a8d7f3879d/embed?ui_theme=dark"> 
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const modelSelector = document.getElementById('modelSelector');
+        const sketchfabIframe = document.getElementById('sketchfab-iframe');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+
+        function updateModel(modelId) {
+            loadingIndicator.classList.remove('hidden');
+            const newSrc = `https://sketchfab.com/models/${modelId}/embed?ui_theme=dark`;
+            sketchfabIframe.src = newSrc;
+            
+            // Hide loading indicator after iframe loads
+            sketchfabIframe.addEventListener('load', () => {
+                loadingIndicator.classList.add('hidden');
+            }, { once: true });
+        }
+
+        modelSelector.addEventListener('change', (e) => {
+            updateModel(e.target.value);
+        });
+
+        // Hide loading indicator on initial page load
+        window.addEventListener('load', () => {
+            loadingIndicator.classList.add('hidden');
+        });
+    </script>
+
+
     <section id="grid" class="py-12 px-4 bg-gray-50 dark:bg-gray-800/50">
         <div class="container mx-auto">
             <div class="relative">
